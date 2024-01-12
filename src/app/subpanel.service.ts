@@ -16,4 +16,8 @@ export class SubpanelService {
   addSubpanels(body = {}) {
     return this.http.post(environment.cricket.baseUrl + 'subpaneles', body);
   }
+
+  deleteSubpanel(id: number) {
+    return this.http.delete(environment.cricket.baseUrl + 'subpaneles/' + id);
+  }
 }

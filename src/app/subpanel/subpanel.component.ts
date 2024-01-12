@@ -25,4 +25,11 @@ export class SubpanelComponent implements OnInit {
   add() {
     this.router.navigate(['/subpanel/add']);
   }
+
+  delete(id: number) {
+    this.subpanelService.deleteSubpanel(id).subscribe((response: any) => {
+      alert('Deleted!');
+      this.router.navigate(['/']);
+    });
+  }
 }
