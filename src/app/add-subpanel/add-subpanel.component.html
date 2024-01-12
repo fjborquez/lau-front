@@ -1,0 +1,44 @@
+<div class="main-container">
+  <div class="demo-button-container">
+    <button mat-raised-button class="demo-button" (click)="back()">
+      <mat-icon>arrow_back</mat-icon>Back
+    </button>
+  </div>
+  <div class="mat-elevation-z8" style="padding:10px;">
+      <form #createForm="ngForm" (ngSubmit)="create(createForm)">
+        <div style="display:flex;">
+          <label for="name">Name</label>
+          <input name="name" id="name" type="text" ngModel />
+        </div>
+        <div class="form-space"></div>
+        <div style="display:flex;">
+          <label for="description">Description</label>
+          <input name="description" id="description" type="text" ngModel />
+        </div>
+        <div class="form-space"></div>
+        <div style="display:flex;">
+          <label for="url">URL</label>
+          <input name="url" id="url" type="text" ngModel />
+        </div>
+        <div class="form-space"></div>
+        <div style="display:flex;">
+          <label for="entity">Entity</label>
+          <input name="entity" id="entity" type="text" ngModel />
+        </div>
+        <div class="form-space"></div>
+        <div style="display:flex;">
+          <label for="type">Type</label>
+          <input name="type" id="type" type="text" ngModel />
+        </div>
+        <div class="form-space"></div>
+        <div style="display:flex;">
+          <label for="grouped_by">Grouped by</label>
+          <input name="grouped_by" id="grouped_by" type="text" ngModel />
+        </div>
+        <div class="form-space"></div>
+        <button mat-raised-button class="demo-button" type="submit">
+          Save
+        </button>
+      </form>
+    </div>
+</div>

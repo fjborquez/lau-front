@@ -1,7 +1,7 @@
-<div style="width:95%; margin: auto; padding:20px;">
+<div class="main-container">
   <div class="demo-button-container">
-    <button mat-raised-button class="demo-button">
-      Add subpanel
+    <button mat-raised-button class="demo-button" (click)="add()">
+      <mat-icon>add</mat-icon>Add
     </button>
   </div>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
