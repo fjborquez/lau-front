@@ -1,0 +1,21 @@
+<div class="main-container">
+  <div class="mat-elevation-z8 inner-container">
+    <form #loginForm="ngForm" (click)="login(loginForm)">
+      <div style="display:flex;">
+        <label for="email">Email</label>
+        <input name="email" id="email" type="text" ngModel />
+      </div>
+      <div class="form-space"></div>
+      <div style="display:flex;">
+        <label for="password">Password</label>
+        <input name="password" id="password" type="password" ngModel />
+      </div>
+      <div class="form-space"></div>
+      <div class="demo-button-container">
+        <button mat-raised-button class="demo-button" type="submit">
+          <mat-icon>people</mat-icon>Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

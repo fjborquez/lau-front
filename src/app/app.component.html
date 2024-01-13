@@ -1,7 +1,7 @@
 <mat-toolbar>
   <mat-toolbar-row>
     <span>Lau</span>
-    <button mat-button [matMenuTriggerFor]="menu">Cricket</button>
+    <button mat-button [matMenuTriggerFor]="menu" *ngIf="showMenu()">Cricket</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item routerLink="/subpanel">Subpanel</button>
     </mat-menu>

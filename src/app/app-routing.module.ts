@@ -1,12 +1,16 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { AddSubpanelComponent } from './add-subpanel/add-subpanel.component';
+import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { SubpanelComponent } from './subpanel/subpanel.component';
+import { ValidateTokenGuard } from './validate-token.guard';
 
 const routes: Routes = [
-  {path: 'subpanel', component: SubpanelComponent},
-  {path: 'subpanel/add', component: AddSubpanelComponent}
+  {path: '', component: LoginComponent},
+  {path: 'subpanel', component: SubpanelComponent, canActivate: [ValidateTokenGuard]},
+  {path: 'subpanel/add', component: AddSubpanelComponent, canActivate: [ValidateTokenGuard]},
+  {path: 'login', component: LoginComponent},
 ];
 
 @NgModule({
