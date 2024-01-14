@@ -15,13 +15,17 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { SubpanelComponent } from './subpanel/subpanel.component';
+import { UserComponent } from './user/user.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubpanelComponent,
     AddSubpanelComponent,
-    LoginComponent
+    LoginComponent,
+    UserComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,

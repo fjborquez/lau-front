@@ -10,6 +10,18 @@ export class UserService {
 
   constructor(private http: HttpClient, private jwtHelperService: JwtHelperService) { }
 
+  list() {
+    return this.http.get(environment.cricket.baseUrl + 'users');
+  }
+
+  add(body = {}) {
+    return this.http.post(environment.cricket.baseUrl + 'users', body);
+  }
+
+  delete(id: number) {
+    return this.http.delete(environment.cricket.baseUrl + 'users/' + id);
+  }
+
   login(email: string, password: string) {
     return this.http.post(environment.cricket.baseUrl + 'login', {
       email,
